@@ -8,3 +8,12 @@
 .status p{
   padding: 20px;
 }
+.status .admin{
+  display: none;
+}
+.status.hover .admin{
+  display: inline;
+}
+.status.hover{
+  background: #fafafa;
+}
