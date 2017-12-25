@@ -14,6 +14,39 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-default " role="navigation">
+      <div class="container">
+        <!-- El logotipo y el icono que despliega el menú se agrupa-->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Desplegar navegación</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand size-navbar1" href="#inicio">Red</a>
+        </div>
+        <!-- ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right size-navbar2">
+            <li class="active"><%= link_to "Status", statuses_path %></li>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
