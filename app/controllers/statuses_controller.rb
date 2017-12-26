@@ -8,7 +8,7 @@ class StatusesController < ApplicationController
 
     respond_to do |format|
       format.html #index.html.erb
-      format.jsom {render json: @statuses}
+      format.json { render json: @statuses }
     end
   end
 
