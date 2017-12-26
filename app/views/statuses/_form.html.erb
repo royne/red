@@ -11,8 +11,11 @@
     </div>
   <% end %>
 
-  
 
+  <div class="field form-group">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, autofocus: true, class: "form-control"%>
+  </div>
   <div class="field form-group">
     <%= form.label :contenido %>
     <%= form.text_area :contenido, id: :status_contenido, class: "form-control", rows: "10"%>

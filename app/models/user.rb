@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
   attr_accessible :nombre, :apellido, :username, :email,
                   :password, :password_confirmation
+
+  has_many :statuses
+
+  def nombre_completo
+    nombre + " " + apellido
+  end
 end

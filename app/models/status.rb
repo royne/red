@@ -1,3 +1,4 @@
 class Status < ApplicationRecord
-  attr_accessible :contenido
+  attr_accessible :contenido, :user_id
+  belongs_to :user
 end
