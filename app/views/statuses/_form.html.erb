@@ -11,14 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :status_nombre %>
-  </div>
+  
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :contenido %>
-    <%= form.text_area :contenido, id: :status_contenido %>
+    <%= form.text_area :contenido, id: :status_contenido, class: "form-control", rows: "10"%>
   </div>
 
   <div class="actions">
