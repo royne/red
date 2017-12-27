@@ -1,20 +1,25 @@
-<div class="page-header">
-  <h1>Todas las entradas</h1>
-  <%= link_to "Nuevo Post", new_status_path, class: "btn btn-default" %>
-</div>
 
-<% @statuses.each do |status| %>
-
-  <div class="status">
-    <strong><%= status.user.nombre_completo %></strong>
-    <p><%= status.contenido %></p>
-    <div class="">
-      <%= link_to "Hace " + time_ago_in_words(status.created_at), status %>
-      <span class="admin">
-        | <%= link_to "Editar", edit_status_path(status) %> |
-        <%= link_to "Eliminar", status, method: :delete, data: {confirm: "¿estas seguro que quieres eliminar esto?"} %>
-      </span>
+<div class="conatiner">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="page-header">
+      <h1>Todas las entradas</h1>
+      <%= link_to "Nuevo Post", new_status_path, class: "btn btn-default" %>
     </div>
-  </div>
 
-<% end %>
+    <% @statuses.each do |status| %>
+
+    <div class="status">
+      <strong><%= status.user.nombre_completo %></strong>
+      <p><%= status.contenido %></p>
+      <div class="">
+        <%= link_to "Hace " + time_ago_in_words(status.created_at), status %>
+        <span class="admin">
+          | <%= link_to "Editar", edit_status_path(status) %> |
+          <%= link_to "Eliminar", status, method: :delete, data: {confirm: "¿estas seguro que quieres eliminar esto?"} %>
+        </span>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+</div>
