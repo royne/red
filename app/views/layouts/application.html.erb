@@ -36,8 +36,8 @@
                   <li><%= link_to current_user.nombre_completo, edit_user_registration_path %></li>
                   <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
             <% else %>
-                  <li><%= link_to "Registrar", new_user_registration_path %></li>
-                  <li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
+                  <li><%= link_to "Registrar", sign_up_path %></li>
+                  <li><%= link_to "Iniciar Sesión", sign_in_path %></li>
             <% end %>
           </ul>
         </div>

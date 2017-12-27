@@ -11,8 +11,9 @@ class StatusesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_status_url
-    assert_response :success
+    get :new
+    assert_response :redirect
+    assert_redirected_to sign_in_path
   end
 
   test "should create status" do
