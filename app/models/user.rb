@@ -9,6 +9,9 @@ class User < ApplicationRecord
 
   has_many :statuses
 
+  validates :nombre, :apellido, :username, presence: true
+  validates :username, uniqueness: true
+
   def nombre_completo
     nombre + " " + apellido
   end
